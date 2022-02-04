@@ -1,5 +1,5 @@
 <template>
-	<ul class="cart-view" v-if="renderCartItems.length">
+	<ul class="cart-view">
 		<router-link class="router-link" to="/"><span class="material-icons close"> close </span></router-link>
 		<li v-for="cartItem of renderCartItems" :key="cartItem.name">
 			<p>{{ cartItem.name }}</p>
@@ -42,6 +42,7 @@ export default {
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
+
 .router-link {
 	color: white;
 	text-decoration: none;
@@ -51,7 +52,6 @@ export default {
 	margin: 1rem;
 }
 li {
-	flex-direction: column;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -68,8 +68,8 @@ li {
 .cart-view {
 	padding: 1rem;
 	position: fixed;
-	top: 10rem;
-	left: 0.5rem;
+	top: 5rem;
+	right: 0.5rem;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.767);
 	border: solid 1px rgb(200, 175, 29);

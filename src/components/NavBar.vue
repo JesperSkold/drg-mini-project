@@ -9,14 +9,20 @@
 			<li>Contact</li>
 			<li>FAQ</li>
 			<li>
-				<router-link :to="{name: 'CartView'}"> <span class="material-icons"> shopping_cart </span></router-link>
+				<router-link class="router-link" :to="{ name: 'CartView' }"> <span class="material-icons"> shopping_cart </span><span class="quantity">{{renderCartQuantity}}</span></router-link>
 			</li>
 		</ul>
 	</nav>
 </template>
 
 <script>
-export default {};
+export default {
+	computed: {
+		renderCartQuantity() {
+			return this.$store.getters.calcQuantity;
+		},
+	},
+};
 </script>
 
 <style lang="scss" scoped>
@@ -50,5 +56,19 @@ nav ul {
 nav ul li {
 	margin: 0rem 3rem;
 	list-style: none;
+}
+
+.router-link {
+	color: white;
+  position: relative;
+}
+.quantity{
+  left: .8rem;
+  position: absolute;
+  width: 1rem;
+  text-align: center;
+  background: white;
+  color: black;
+  border-radius: 100%;
 }
 </style>
