@@ -1,0 +1,26 @@
+[
+	{ "name": "Extraordinary Fester Flea", 
+    "img": "assets/Fleas.png", 
+    "price": 100 
+  },
+	{ "name": "Exquisite Glyphid Exploder", 
+    "img": "assets/Glyphid_exploder.png", 
+    "price": 10 
+  },
+	{ "name": "Outstanding Glyphid Slasher", 
+    "img": "assets/Glyphid_Slasher.png", 
+    "price": 1337 
+  },
+	{ "name": "Remarkable Glyphid Swarmer", 
+    "img": "assets/Glyphid_swarmer.png", 
+    "price": 13137 
+  },
+	{ "name": "Unprecedented Golden Lootbug", 
+    "img": "assets/Golden_LootBug.png", 
+    "price": 135637 
+  },
+	{ "name": "Exceptional Lootbug", 
+    "img": "assets/LootBug.png", 
+    "price": 13237 
+  }
+]
