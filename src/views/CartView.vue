@@ -42,7 +42,6 @@ export default {
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
-
 .router-link {
 	color: white;
 	text-decoration: none;

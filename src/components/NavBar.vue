@@ -5,11 +5,13 @@
 			<p>A Page for Merchandise, News and Information about Hoxxes IV</p>
 		</section>
 		<ul>
-			<li>Shipping</li>
-			<li>Contact</li>
+			<router-link class="nav-link" to="/"><li>Home</li></router-link>
+			<router-link class="nav-link" :to="{ name: 'NewsView' }"><li>News</li></router-link>
 			<li>FAQ</li>
 			<li>
-				<router-link class="router-link" :to="{ name: 'CartView' }"> <span class="material-icons"> shopping_cart </span><span class="quantity">{{renderCartQuantity}}</span></router-link>
+				<router-link class="router-link" :to="{ name: 'CartView' }">
+					<span class="material-icons"> shopping_cart </span><span class="quantity">{{ renderCartQuantity }}</span></router-link
+				>
 			</li>
 		</ul>
 	</nav>
@@ -58,17 +60,22 @@ nav ul li {
 	list-style: none;
 }
 
+.nav-link {
+	color: white;
+	text-decoration: none;
+}
+
 .router-link {
 	color: white;
-  position: relative;
+	position: relative;
 }
-.quantity{
-  left: .8rem;
-  position: absolute;
-  width: 1rem;
-  text-align: center;
-  background: white;
-  color: black;
-  border-radius: 100%;
+.quantity {
+	left: 0.8rem;
+	position: absolute;
+	width: 1rem;
+	text-align: center;
+	background: white;
+	color: black;
+	border-radius: 100%;
 }
 </style>

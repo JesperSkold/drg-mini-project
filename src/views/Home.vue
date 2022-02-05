@@ -9,7 +9,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import ProductCard from "../components/ProductCard.vue";
 import NavBar from "../components/NavBar.vue";
 
