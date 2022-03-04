@@ -1,6 +1,5 @@
 <template>
 	<div class="home">
-		<NavBar />
 		<div class="products">
       <article v-for="product in products" :key="product.name"><ProductCard :productObj="product"/></article>
     </div>
@@ -10,12 +9,9 @@
 
 <script>
 import ProductCard from "../components/ProductCard.vue";
-import NavBar from "../components/NavBar.vue";
-
 export default {
 	name: "Home",
 	components: {
-		NavBar,
 		ProductCard,
 	},
 	computed: {
@@ -33,6 +29,7 @@ export default {
 	background-size: cover;
 
   .products{
+	padding: 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

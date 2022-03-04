@@ -1,5 +1,5 @@
 <template>
-	<nav>
+	<nav :class="{ newsNav: newsNav }">
 		<section>
 			<h1>DRG All-in-One</h1>
 			<p>A Page for Merchandise, News and Information about Hoxxes IV</p>
@@ -7,7 +7,6 @@
 		<ul>
 			<router-link class="nav-link" to="/"><li>Home</li></router-link>
 			<router-link class="nav-link" :to="{ name: 'NewsView' }"><li>News</li></router-link>
-			<li>FAQ</li>
 			<li>
 				<router-link class="router-link" :to="{ name: 'CartView' }">
 					<span class="material-icons"> shopping_cart </span><span class="quantity">{{ renderCartQuantity }}</span></router-link
@@ -24,12 +23,38 @@ export default {
 			return this.$store.getters.calcQuantity;
 		},
 	},
+	data() {
+		return {
+			newsNav: false,
+		};
+	},
+	watch: {
+		$route(to) {
+			if (to.path === "/news") {
+				this.newsNav = true;
+				console.log("news");
+			} else {
+				this.newsNav = false;
+				console.log("home");
+			}
+		},
+	},
+	mounted() {
+		if (this.$route.path === "/news") {
+			this.newsNav = true;
+		} else {
+			this.newsNav = false;
+		}
+	},
 };
 </script>
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 nav {
+	background-color: rgba(92, 53, 8, 0.781);
+	position: fixed;
+	width: 100%;
 	color: rgb(255, 255, 255);
 	display: flex;
 	justify-content: space-around;
@@ -77,5 +102,8 @@ nav ul li {
 	background: white;
 	color: black;
 	border-radius: 100%;
+}
+.newsNav {
+	background-color: rgba(5, 4, 92, 0.5);
 }
 </style>

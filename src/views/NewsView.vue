@@ -1,6 +1,5 @@
 <template>
 	<div class="wrapper">
-		<NavBar />
 		<div class="news-container">
 			<h1>Latest space news</h1>
 			<article v-for="article of articles" :key="article.id">
@@ -20,11 +19,7 @@
 </template>
 
 <script>
-import NavBar from "../components/NavBar.vue";
 export default {
-	components: {
-		NavBar,
-	},
 	computed: {
 		articles() {
 			return this.$store.state.articles;
