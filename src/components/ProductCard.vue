@@ -30,7 +30,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	margin: 5rem 5rem;
+	margin: 5rem;
 	background-color: rgba(44, 19, 8, 0.541);
 }
 
@@ -56,5 +56,24 @@ export default {
 .product-card__button:hover {
 	background-color: rgba(221, 185, 25, 0.938);
 	cursor: pointer;
+}
+
+@media (min-width: 650px) and (max-width: 1000px) {
+	.product {
+		margin: 10rem 2rem 2rem 2rem;
+	}
+}
+@media (max-width: 650px) {
+	.product {
+		margin: 1rem;
+		width: 8rem;
+		p{
+			height: 2rem;
+		}
+	}
+	.product-image-container img {
+		width: 4rem;
+		height: 5rem;
+	}
 }
 </style>

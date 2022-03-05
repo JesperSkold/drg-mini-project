@@ -35,6 +35,19 @@ export default {
   justify-content: center;
   align-items: center;
   }
-
+}
+@media (max-width: 1000px){
+	.home{
+		.products{
+			padding: unset;
+		}
+	}
+}
+@media (max-width: 650px){
+	.home{
+		.products{
+			display: flex;
+		}
+	}
 }
 </style>

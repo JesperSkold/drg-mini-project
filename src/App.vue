@@ -1,6 +1,7 @@
 <template>
 	<div id="app">
-		<NavBar />
+		<NavBar v-if="$mq === 'lg' || $mq === 'md'"/>
+		<Burger v-if="$mq === 'sm'"/>
 		<router-view></router-view>
 		<Footer />
 	</div>
@@ -10,10 +11,12 @@
 
 import NavBar from "@/components/NavBar.vue";
 import Footer from "@/components/Footer.vue";
+import Burger from "@/components/BurgerMenu.vue"
 
 export default{
 	components:{
 		NavBar,
+		Burger,
 		Footer
 	}
 }
@@ -24,4 +27,5 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 </style>

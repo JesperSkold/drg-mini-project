@@ -46,7 +46,7 @@ export default {
 	color: white;
 }
 .news-container img {
-	width: 40rem;
+	width: inherit;
 	height: auto;
 }
 
@@ -55,13 +55,13 @@ export default {
 	font-size: 3rem;
 }
 .news-container__summary {
-	width: 40rem;
+	width: inherit;
 	font-size: 1rem !important;
 }
 
 .news-container h2 {
 	font-family: "Space Mono";
-	width: 40rem;
+	width: inherit
 }
 
 .news-container p {
@@ -71,6 +71,7 @@ export default {
 
 .news-container figure {
 	margin: 0;
+	width: 50vw;
 	background-color: rgba(5, 4, 92, 0.5);
 	border: 2px solid rgb(6, 4, 92);
 }

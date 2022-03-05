@@ -55,19 +55,20 @@ footer {
 	justify-content: space-around;
 	background-color: rgba(92, 53, 8, 0.781);
 	ul {
-    color: white;
-    a{
-      text-decoration: none;
-      color: white;
-    }
+		padding: 0;
+		color: white;
+		a {
+			text-decoration: none;
+			color: white;
+		}
 		li {
-			margin: 1rem;
+			margin-top: 1rem;
 			list-style: none;
 			cursor: pointer;
 		}
 	}
 	.socials {
-		width: 20rem;
+		width: 20vw;
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
@@ -75,6 +76,17 @@ footer {
 			cursor: pointer;
 			width: 4rem;
 		}
+	}
+}
+@media (max-width: 360px) {
+	footer {
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.socials img{
+		margin: 1rem 1rem;
 	}
 }
 </style>

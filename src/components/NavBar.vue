@@ -76,12 +76,13 @@ nav section {
 }
 
 nav ul {
+	width: 20rem;
 	display: flex;
 	align-items: center;
+	justify-content: space-around;
 }
 
 nav ul li {
-	margin: 0rem 3rem;
 	list-style: none;
 }
 
